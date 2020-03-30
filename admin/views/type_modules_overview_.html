@@ -1,0 +1,34 @@
+<div class="additional-links">
+    <a href="~language_prefix~/~pagename~/pages/types" title="*Pages types*"><i class="fa fa-clone"></i></a>
+</div>
+<table cellpadding="0" cellspacing="0" class="admin-overview">
+    <thead>
+        <tr>
+            <th width="10%"></th>
+            <th width="90%" class="text-left">*Modules*</th>
+        </tr>
+    </thead>
+    <tbody data-m-action="drag_sort" data-m-model="modules\pages\models\pages_types_modules">
+    ~items~
+    </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" class="admin-overview">
+    <tr class="editable" data-id="null">
+        <td width="10%">
+            <a href="#"
+               data-model="modules\pages\models\pages_types_modules"
+               data-m-action="dynamic_edit"
+               data-m-context="tr[data-id='null']"
+               title="*to add*"
+               class="edit save plus"><i class="fa fa-edit"></i></a>
+            <a href="#"
+               data-model="modules\pages\models\pages_types_modules"
+               data-m-action="dynamic_edit"
+               data-m-context="tr[data-id='null']"
+               class="delete"
+               title="*Delete*"><i class="fa fa-trash"></i></a>
+            <input type="hidden" data-edit="type" value="~type~">
+        </td>
+        <td class="text-left" width="90%"><span data-edit="module"><textarea placeholder="*Put a path to client module class*"></textarea></span></td>
+    </tr>
+</table>

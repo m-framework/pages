@@ -1,0 +1,13 @@
+.admin-overview .editable textarea,
+.admin-overview .editable select,
+.admin-overview [data-edit] textarea,
+.admin-overview [data-edit] select
+{
+    height: 34px !important;
+    width: 100%;
+    margin-top: 0;
+}
+.admin-overview .editable a.edit.cog {
+    display: none;
+}
+

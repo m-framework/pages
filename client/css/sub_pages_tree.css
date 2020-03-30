@@ -1,0 +1,90 @@
+.subpages-tree {
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.subpages-tree a {
+    font-size: 14px;
+    padding: 15px;
+    display: block;
+    color: #555;
+    border-top: solid 1px #e4e4e4;
+}
+.subpages-tree a:first-of-type {
+    border-top: none;
+}
+.subpages-tree .subpages a {
+    padding: 10px 10px 10px 30px;
+    background-color: #f8f8f8;
+    font-size: 13px;
+}
+.subpages-tree .subpages .subpages a {
+    padding: 10px 10px 10px 50px;
+    background-color: #fbfbfb;
+    font-size: 12px;
+}
+.subpages-tree .subpages .subpages .subpages a {
+    padding: 10px 10px 10px 60px;
+}
+.subpages-tree .subpages .subpages .subpages .subpages a {
+    padding: 10px 10px 10px 70px;
+}
+.subpages-tree .subpages .subpages .subpages .subpages .subpages a {
+    padding: 10px 10px 10px 80px;
+}
+.subpages-tree .subpages .subpages .subpages .subpages .subpages .subpages a {
+    padding: 10px 10px 10px 90px;
+}
+.subpages-tree .subpages .subpages .subpages .subpages .subpages .subpages .subpages a {
+    padding: 10px 10px 10px 100px;
+}
+.subpages-tree .subpages a:first-of-type {
+    border-top: solid 1px #e4e4e4;
+}
+.subpages-tree > a:hover,
+.subpages-tree > a.active
+{
+    text-decoration: none;
+    background-color: #0F9CDE;
+    color: #DAF8F7;
+}
+.subpages-tree .subpages a:hover,
+.subpages-tree .subpages a.active
+{
+    text-decoration: none;
+    background-color: #72afc6;
+    color: #e0f6f8;
+}
+.subpages-tree-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'FontAwesome';
+    background-color: #0F9CDE;
+}
+.subpages-tree-toggle:before {
+    content: '\f0c9';
+}
+
+@media (max-width: 768px) {
+
+    .subpages-tree-toggle {
+        display: inline-block;
+        margin-left: 4px;
+    }
+    .subpages-tree,
+    .w25 .block.subpages-tree
+    {
+        display: none;
+        margin-top: 0;
+    }
+    .subpages-tree-toggle:hover + .subpages-tree,
+    .subpages-tree-toggle + .subpages-tree:hover
+    {
+        display: block;
+    }
+}

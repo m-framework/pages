@@ -1,0 +1,31 @@
+<div class="additional-links">
+    <a href="~language_prefix~/~pagename~/pages" title="*Pages overview*"><i class="fa fa-clone"></i></a>
+</div>
+<table cellpadding="0" cellspacing="0" class="admin-overview">
+    <thead>
+        <tr>
+            <th width="20%"></th>
+            <th width="80%" class="text-left">*Page type*</th>
+        </tr>
+    </thead>
+    ~items~
+    <tr class="editable" data-id="null">
+        <td width="20%">
+            <a href="#"
+               data-model="modules\pages\models\pages_types"
+               data-m-action="dynamic_edit"
+               data-m-context="tr[data-id='null']"
+               class="edit save plus"><i class="fa fa-edit"></i></a>
+            <a href="~language_prefix~/~pagename~/pages/type-modules/{id}"
+               title="*Edit page type modules*"
+               class="edit cog"><i class="fa fa-cog"></i></a>
+            <a href="#"
+               data-model="modules\pages\models\pages_types"
+               data-m-action="dynamic_edit"
+               data-m-context="tr[data-id='null']"
+               class="delete"
+               title="*Delete*"><i class="fa fa-trash"></i></a>
+        </td>
+        <td class="text-left" width="80%"><span data-edit="type"><textarea placeholder="*Put new page type*"></textarea></span></td>
+    </tr>
+</table>

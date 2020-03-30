@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>~title~</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow"/>
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="https://cdn.m-framework.com/css/1.1.min/m.css" type="text/css" media="all">
+    <style>
+        body {
+            background-color: #f8f8f8;;
+        }
+        .container.exception {
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: solid 1px #e9e9e9;
+            max-width: 1160px;
+            background-color: #fff;
+        }
+        .container.exception h1 {
+            color: #e27143;
+            border-bottom: solid 1px #ddd;
+        }
+        .additional-info {
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="container exception">
+    <h1 class="error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ~title~</h1>
+    <p><i>*Message*:</i></p>
+    <p>~message~</p>
+    <!--admin-->
+    <p><i>*Backtrace*:</i></p>
+    <p class="code">~trace~</p>
+    <p><i>*DB logs*:</i></p>
+    <p class="code">~db_logs~</p>
+    <!--end admin-->
+    <p class="additional-info">~php_ver~<br>~date_time~</p>
+</div>
+</body>
+</html>

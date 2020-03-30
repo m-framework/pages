@@ -1,0 +1,14 @@
+<form name="page_form" action="" method="post" class="edit-form">
+    <div class="additional-links">
+        <a onclick="return page_form.submit();" title="*to save*"><i class="fa fa-save"></i></a> &nbsp;
+        <a href="~language_prefix~/~pagename~/pages/delete/~id~" onclick="return confirm('*Are you sure to delete this page*?');" title="*Delete*"><i class="fa fa-trash"></i></a> &nbsp;
+        <a href="~path~" target="_blank" title="*View this page*"><i class="fa fa-eye"></i></a> &nbsp;
+        <a href="~language_prefix~/~pagename~/pages" title="*Pages overview*"><i class="fa fa-clone"></i></a>
+    </div>
+    ~errors~
+    ~saved~
+    ~rows~
+    <dl class="edit_row">
+        <dt></dt><dd><button class="btn" type="submit"><i class="fa fa-save" aria-hidden="true"></i> *Save*</button></dd>
+    </dl>
+</form>

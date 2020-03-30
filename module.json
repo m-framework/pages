@@ -1,0 +1,19 @@
+{
+  "title":"Pages",
+  "name":"pages",
+  "description":"Manage all website pages: dispositions, types, addresses, caching all the page or setting a special template for a page.",
+  "icon":"<i class=\"fa fa-clone\"></i>",
+  "version":"1.0",
+  "date":"2017-09-20",
+  "author":"mrinmiro@gmail.com",
+  "compatible_cores":["1.0"],
+  "dashboard_menu":{
+    "/overview":"<i class=\"fa fa-clone\"></i> *Pages overview*",
+    "/types":"<i class=\"fa fa-clone\"></i> *Pages types*",
+    "/add":"<i class=\"fa fa-plus\"></i> *Add new page*"
+  },
+  "tags":["pages","SEO","pages SEO"],
+  "price":"0",
+  "requires":["users"],
+  "":""
+}
