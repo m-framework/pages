@@ -59,15 +59,30 @@ class page_helper extends module {
             $backtrace = ob_get_contents();
             ob_clean();
 
-            $db_logs = (array)registry::get('db_logs');
-            foreach($db_logs as $i => $log_record) {
-                $db_logs[$i] = ($i+1) . '. ' . nl2br($log_record) . "<br>";
+            $db_logs = '';
+
+            foreach(registry::get('db_logs') as $n => $log_record) {
+                if (empty($log_record['query'])) {
+                    continue;
+                }
+
+                if (isset($this->view->debug_info_db_query)) {
+                    $db_logs .= $this->view->debug_info_db_query->prepare([
+                        'n' => $n + 1,
+                        'query' => $log_record['query'],
+                        'time' => $log_record['time'],
+                        'backtrace' => implode("\n", $log_record['backtrace']),
+                    ]);
+                }
+                else {
+                    $db_logs .= $log_record['query'] . ' (' . $log_record['time'] . 's)' . "<br>";
+                }
             }
 
             view::set('debug_info', $this->view->debug_info->prepare([
-                'short_backtrace' => nl2br($short_backtrace),
-                'backtrace' => nl2br(str_replace(' ', '&nbsp;', $backtrace)),
-                'db_logs' => implode("<br>", $db_logs),
+                'short_backtrace' => $short_backtrace,
+                'backtrace' => str_replace(' ', '&nbsp;', $backtrace),
+                'db_logs' => $db_logs,
             ]));
         }
 
